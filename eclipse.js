@@ -710,7 +710,8 @@ function computeOutlinePoint(be,Q,umbra){
     //The Explanatory Supplement to the Astronomical Ephemeris 1961
     //Prediction and Analysis of Solar Eclipse Circumstances - Williams 1971
     //P220
-    const e=Math.sqrt(0.00672267);
+    // e updated to WGS-84
+    const e=Math.sqrt(0.006694379990);
     const sind=Math.sin(be.d*rad);
     const cosd=Math.cos(be.d*rad);
     const ρ1=Math.sqrt(1-e*e*cosd*cosd);
@@ -1054,7 +1055,7 @@ function getPenumbraStartStopTimes(elements){
     //From Explanatory Supplement 1961ed
     const be=getElements(elements,0,0,0,0);
     const rad=Math.PI/180;
-    const e=Math.sqrt(0.00672267);
+    const e=Math.sqrt(0.006694379990);
     
     be.x=be.X;
     be.y=be.Y;
@@ -1085,7 +1086,7 @@ function getPenumbraStartStopTimes(elements){
 
 function getPenumbraStartStopPoints(be){
     const rad=Math.PI/180;
-    const e=Math.sqrt(0.00672267);
+    const e=Math.sqrt(0.006694379990);
     
     be.x=be.X;
     be.y=be.Y;
